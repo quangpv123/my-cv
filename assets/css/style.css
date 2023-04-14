@@ -1,0 +1,431 @@
+
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ html{
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ :root{
+    --color-yellow: rgb(255,197,0);
+    --color-yellow-hover: rgb(187, 148, 22);
+    --color-bg:  rgba(235, 255, 170, 0.15);
+ }
+
+body{
+    background:url(https://html.tavonline.co/mat/default/images/bg.png) #fafafa;
+    
+}
+
+p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+ul{
+    list-style-type: none;
+}
+
+
+.line{
+    display: inline-block;
+    width: max-content;
+    line-height: 5px;
+}
+
+.line span{display: inline-block;
+    height: 7px;
+    width: 100%;
+    background-color: var(--color-yellow);
+    opacity: 0.5;
+}
+
+h5{
+    line-height: 30px;
+    padding-top: 10px;
+}
+h6{
+    line-height:30px;
+}
+.wrapper{
+    width: 1140px;
+    height: 5000px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.profile{
+    height: 636px;
+    width: 262px;
+    padding: 15px;
+    background-color: var(--color-bg);
+}
+
+.profile__name{
+    margin-left: 20px;
+    width: 100%;
+    height: 38px;
+}
+
+.name{
+    font-size: 16px;
+}
+
+.job {
+    font-size: 14px;
+    opacity: 0.7;
+}
+.profile__info{
+    line-height: 2.5;
+    height: 244px;
+    font-size: 14px;
+    margin: 8px 0px 8px 36px;
+    list-style-type: none;
+}   
+
+
+.profile__info-glasses{
+    width: 20%;
+    margin-left: -34px;
+}
+.profile__info-font{
+    opacity: 0.7;
+}
+.profile__info-font-t{
+  
+}
+
+.profile__avatar{
+    width: 232px;
+    height: 232px;
+}
+.downloadcv{
+    margin-left: 40px;
+}
+
+.btn{
+    font-size: bold 14px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    padding: 1px 25px;
+    line-height: 36px;
+    background: var(--color-yellow);
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: var(--color-yellow-hover)
+}
+    
+
+.main{
+    width: 848px;
+    height: 1286px;
+    padding: 0 15px;
+
+}
+.header{
+    width: 848px;
+    height: 76px;
+    border-radius: 10px;
+    display: flex;
+}
+.nav li{
+  display: inline-block;
+}
+.nav li a{
+    color: black;
+    text-decoration: none;
+    line-height: 76px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 10px;
+}
+.nav li a:hover{
+    color: var(--color-yellow)
+}
+
+.nav .nav-btn-h{
+    background-color: var(--color-yellow);
+    border-radius: 7px 0 0 7px;
+
+}
+.nav .nav-btn-h:hover{
+    background-color: var(--color-yellow-hover);
+}
+.nav .nav-btn-home{
+    padding: 0 18px;
+    color: black !important;
+}
+.social{
+    margin-left: auto;
+    margin-top: 18px;
+}
+.social a{
+    padding: 10px;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+.social a:first-child:hover{
+    color: blue;
+}
+.social a:nth-child(2):hover{
+    color: blue;
+}
+.social a:nth-child(3):hover{
+    color: red;
+}
+.social a:nth-child(4):hover{
+    color: red;
+}
+
+.btn-mail{
+    font-size: bold 14px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    padding: 1px 25px;
+    line-height: 35px;
+    background: var(--color-yellow);
+    cursor: pointer;
+    margin-left: 0;
+}
+.btn-mail:hover{
+    background-color: var(--color-yellow-hover)
+}
+.content{
+
+}
+.content-home{
+    margin-top: 30px;
+}
+
+.home-aboutme{
+    padding: 30px;
+}
+
+.aboutme-p{
+    padding-top: 30px;
+}
+
+.home-my-sv{
+    padding: 30px;
+}
+
+
+.my-sv-items{
+    display: flex;
+    padding: 15px 0;
+}
+.item{  
+    padding: 25px;
+}
+.my-sv-items .icon{
+    font-size: 45px;
+    opacity: 0.6;
+}
+
+.home-skills{
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+}
+
+.home-skills li{
+    list-style-type: none;
+    justify-content: space-between;
+}
+.skill-item{
+    flex-basis: 50%;
+}
+
+.lv{
+    width: 300px;
+    height: 5px;
+    background-color: rgb(200,200,200) !important;
+    border-radius: 2.5px;
+}
+.lv-pts{
+    background: linear-gradient(to right, var(--color-yellow) 80%, transparent 0);
+}
+.lv-skech{
+    background: linear-gradient(to right, var(--color-yellow) 60%, transparent 0);
+}
+.lv-adobe{
+    background: linear-gradient(to right, var(--color-yellow) 30%, transparent 0);
+}
+.lv-javascrip{
+    background: linear-gradient(to right, var(--color-yellow) 80%, transparent 0);
+}
+.lv-html{
+    background: linear-gradient(to right, var(--color-yellow) 60%, transparent 0);
+}
+.lv-css{
+    background: linear-gradient(to right, var(--color-yellow) 30%, transparent 0);
+}
+
+.history{
+}
+
+.history-info{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+
+}
+.info-work{
+    padding: 30px;
+}
+.info-edu{
+    padding: 30px;
+}
+.history li{
+    display: inline-block;
+}
+
+.history-info span{
+    display: block;
+    font-size: 12px;
+    margin-top: -7px;
+}
+
+.history p{
+    display: inline-block;
+    list-style-type: none;
+    opacity: 0.7;
+    margin-top: 15px;
+}
+
+.client-img{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+}
+
+.client img{
+        background: #fff;
+        padding: 18px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+        width: 80%;
+        padding: 26px 16px;
+} 
+
+
+
+
+.testi .line{
+    margin-bottom: 80px;
+}
+
+.testi-cmt {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.testi-cmt-item{
+    padding: 20px;
+    width: 25%;
+}
+.testi-info{
+    display: flex;
+}
+
+.testi .avt {
+    flex: 1;
+}
+
+.testi .name{
+    flex: 2
+}
+
+.testi-info p{
+    opacity: 0.4;
+    margin: 0;
+    font-size: 12px;
+}
+
+
+.testi img{
+    position: relative;
+    width: 120%;
+    border-radius: 50%;
+    bottom: 18px;
+    right: 10px;
+}
+
+.content-portfolio{
+    margin-top: 50px;
+}
+
+.content-portfolio p{
+    display: block;
+    line-height: 1px;
+    padding-left: 10px;
+
+}
+
+.content-portfolio span {
+    padding-left: 10px;
+}
+
+.content-portfolio img{
+    padding-bottom: 25px;
+}
+
+
+
+.filter{
+    display: flex;
+    padding: 20px 0;
+}
+
+.filter a{
+    text-decoration: none;
+    display: block;
+    margin: 0 8px;s
+}
+.item-filter{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 30px;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+
+
+
+
+
+
+
+
+/* .history-info li::before{
+    content: "";
+    border: solid 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    font-size: 8px;
+    margin-left: -25px;
+    margin-top: 2px;
+    font-weight: 400;
+    background: #fff;
+    color: var(--color-yellow);
+} */
+
