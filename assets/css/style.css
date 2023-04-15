@@ -130,7 +130,7 @@ h6{
     position: absolute;
     height: 212px;
     width: 1px;
-    background-color: #ececec;
+    background-color: #ccc;
     left: 33px;
     top: 330px;
 }
@@ -355,10 +355,13 @@ h6{
     margin-top: 40px;
     justify-content: center;
     position: relative;
-
+    padding: 0 20px;
 }
-
-.info-work li:before{
+.history-info h3{
+    display: block;
+    margin-left: 10px;
+}
+.info-work li:not(:first-child):before{
     content: "";
     border: 2px solid var(--color-yellow);
     width: 5px;
@@ -366,9 +369,33 @@ h6{
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    left: -4px;
+    left: 16px;
     margin-top: 20px;
-}x
+}
+
+
+
+.info-work li:first-child{
+    position: relative;
+    bottom: 60px;
+}
+.info-work .briefcase{
+    border: 2px solid var(--color-yellow);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: var(--color-yellow);
+    position: relative;
+    bottom: -40px;
+    right: 56px;
+    opacity: 1;
+}
+
+.history-info .icon{
+    position: relative;
+    left: -94px;
+    bottom: -20px;
+}
 
 .info-work{
     padding: 0 30px;
@@ -376,11 +403,28 @@ h6{
 }
 .info-edu{
     padding: 0 30px;
-    border-left: 1px solid #ececec;
+    border-left: 1px solid #ccc;
     position: relative;
 }
 
-.info-edu li::before{
+.info-edu li:first-child{
+    position: relative;
+    bottom: 60px;
+}
+
+.info-edu .briefcase{
+    border: 2px solid var(--color-yellow);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: var(--color-yellow);
+    position: relative;
+    bottom: -40px;
+    right: 56px;
+    opacity: 1;
+}
+
+.info-edu li:not(:first-child)::before{
     content: "";
     border: 2px solid var(--color-yellow);
     width: 5px;
@@ -592,6 +636,12 @@ h6{
 .form-input-item{
     padding-right: 30px;
 }
+.form .site-input{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    height: 45px;
+}
 .form button{
     border: 0px solid var(--color-yellow);
     border-radius: 15px;
@@ -614,6 +664,14 @@ h6{
 }
 .content-contact span{
     opacity: 0.6;
+}
+
+.infomations{
+    padding-left: 50px;
+}
+.infomations .info{
+    display: block;
+    margin-top: 20px;
 }
 
 .infomations a{
