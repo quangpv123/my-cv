@@ -61,10 +61,13 @@ h6{
 
 
 .profile{
+    border-radius: 7px;
     height: 636px;
     width: 262px;
-    padding: 15px;
-    background-color: var(--color-bg);
+    padding: 15px 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+    position: relative;
 }
 
 .profile__name{
@@ -83,17 +86,58 @@ h6{
 }
 .profile__info{
     line-height: 2.5;
-    height: 244px;
-    font-size: 14px;
-    margin: 8px 0px 8px 36px;
+    /* height: 244px; */
+    font-size: 13px;
+    margin: 0px 0px 0px 60px;
     list-style-type: none;
 }   
 
 
 .profile__info-glasses{
-    width: 20%;
-    margin-left: -34px;
+    width: 15%;
+    position: relative;
+    bottom: 22px;
+    right: 42px;
+    z-index: 1;
 }
+
+.profile__info .glass{
+    border: 2px solid var(--color-yellow);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: var(--color-yellow);
+    position: relative;
+    bottom: 60px;
+    right: 48px;
+    opacity: 1;
+}
+
+.profile .profile__info-font-t::before{
+    content: "";
+    border: 2px solid var(--color-yellow);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 30px;
+    margin-top: 12px;
+    z-index: 1;
+}
+
+.profile .line{
+    position: absolute;
+    height: 212px;
+    width: 1px;
+    background-color: #ececec;
+    left: 33px;
+    top: 330px;
+}
+
+
+
+
 .profile__info-font{
     opacity: 0.7;
 }
@@ -102,11 +146,12 @@ h6{
 }
 
 .profile__avatar{
-    width: 232px;
-    height: 232px;
+    width: 100%;
+    height: 262px;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 .downloadcv{
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .btn{
@@ -118,6 +163,8 @@ h6{
     line-height: 36px;
     background: var(--color-yellow);
     cursor: pointer;
+    margin-top: 10px;
+    margin-left: px;
     
 }
 
@@ -128,15 +175,16 @@ h6{
 
 .main{
     width: 848px;
-    height: 1286px;
+    height: auto;
     padding: 0 15px;
-
+    margin-left: 20px;
 }
 .header{
     width: 848px;
     height: 76px;
     border-radius: 10px;
     display: flex;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
 }
 .nav li{
   display: inline-block;
@@ -203,7 +251,7 @@ h6{
     background-color: var(--color-yellow-hover)
 }
 .content{
-
+    width: 848px;
 }
 .content-home{
     margin-top: 30px;
@@ -211,6 +259,11 @@ h6{
 
 .home-aboutme{
     padding: 30px;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+}
+
+.home-aboutme p{
+    line-height: 30px;
 }
 
 .aboutme-p{
@@ -225,6 +278,7 @@ h6{
 .my-sv-items{
     display: flex;
     padding: 15px 0;
+    justify-content: space-between;
 }
 .item{  
     padding: 25px;
@@ -234,10 +288,17 @@ h6{
     opacity: 0.6;
 }
 
+.my-sv-items .item{
+    width: 22%;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+}
+
 .home-skills{
     display: flex;
     padding: 30px;
-    justify-content: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+
 }
 
 .home-skills li{
@@ -246,6 +307,16 @@ h6{
 }
 .skill-item{
     flex-basis: 50%;
+}
+
+.content-resume{
+    margin-top: 50px;
+    width: 848px;
+}
+
+.history-info{
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+    border-radius: 5px;
 }
 
 .lv{
@@ -276,17 +347,49 @@ h6{
 .history{
 }
 
+.history li:before{
+} 
+
 .history-info{
     display: flex;
     margin-top: 40px;
     justify-content: center;
+    position: relative;
 
 }
+
+.info-work li:before{
+    content: "";
+    border: 2px solid var(--color-yellow);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: -4px;
+    margin-top: 20px;
+}x
+
 .info-work{
-    padding: 30px;
+    padding: 0 30px;
+    border-left: 1px solid #ccc;
 }
 .info-edu{
-    padding: 30px;
+    padding: 0 30px;
+    border-left: 1px solid #ececec;
+    position: relative;
+}
+
+.info-edu li::before{
+    content: "";
+    border: 2px solid var(--color-yellow);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: -4px;
+    margin-top: 20px;
 }
 .history li{
     display: inline-block;
@@ -305,37 +408,41 @@ h6{
     margin-top: 15px;
 }
 
-.client-img{
+.client {
+    padding-top: 50px;
+}
+
+.client-img-a{
     display: flex;
-    justify-content: space-between;
-    margin: 50px 0;
+    justify-content: space-around;
+    margin: 50px 0 50px 30px;
 
 }
 
-.client img{
-        background: #fff;
-        padding: 18px;
+.client .client-img-a img{
+        padding: 26px 16px;
         border-radius: 8px;
         box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
-        width: 80%;
-        padding: 26px 16px;
+        width: 80%;     
 } 
 
 
-
-
 .testi .line{
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .testi-cmt {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    margin-left: 15px;
 }
 .testi-cmt-item{
+    border-radius: 5px;
     padding: 20px;
+    margin: 15px;
     width: 25%;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
 }
 .testi-info{
     display: flex;
@@ -358,10 +465,11 @@ h6{
 
 .testi img{
     position: relative;
-    width: 120%;
+    width: 80%;
     border-radius: 50%;
-    bottom: 18px;
     right: 10px;
+    top: 5px;
+    left: 0;
 }
 
 .content-portfolio{
@@ -393,18 +501,23 @@ h6{
 .filter a{
     text-decoration: none;
     display: block;
-    margin: 0 8px;s
+    margin: 0 8px;
+    color: black;
+    opacity: 0.7;
 }
 .item-filter{
     display: flex;
     flex-direction: column;
     width: 30%;
     padding-top: 30px;
+    border-radius: 5px;
+
 }
 .items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: -40px;
 }
 
 .content-portfolio i{
@@ -561,11 +674,15 @@ h6{
     bottom: 22px;
     right: 100px;
     font-size: 12px;
-    opacity: 0.6;
+    color: #9C9C9C;
 }
 .footer-design a{
     text-decoration: none;
     color: white;
+}
+
+.footer-design a:hover{
+   opacity: 0.8;
 }
 
 
