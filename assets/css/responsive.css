@@ -101,7 +101,10 @@
         cursor: pointer;
     }
 
-    /* Menu ngang  */
+    /* .menu-btn:hover + .menu-hidden {
+        display: inline-block;
+    } */
+
     .menu-hidden {
         display: block;
         position: absolute;
@@ -109,8 +112,9 @@
         background-color: #fff; 
         width: 100%;
         text-align: center;
+        /* display: none; */
         z-index: 2;
-        display: none;
+      
     }
 
     .nav .nav-btn-menu{
@@ -189,6 +193,10 @@
 
     .client .img{
         margin-bottom: 30px;
+    }
+
+    .client-img-a {
+        flex-wrap: wrap;
     }
 
     .content-blog {
