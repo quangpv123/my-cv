@@ -203,7 +203,7 @@ h6{
 .nav .nav-btn{
   display: inline-block;
 }
-.nav .nav-btn a{
+.nav-btn a{
     color: black;
     text-decoration: none;
     line-height: 76px;
@@ -211,7 +211,7 @@ h6{
     font-size: 15px;
     padding: 0 10px;
 }
-.nav .nav-btn a:hover{
+.nav-btn a:hover{
     color: var(--color-yellow)
 }
 
@@ -275,9 +275,11 @@ h6{
     background-color: var(--color-yellow-hover)
 }
 
-.menu-btn{
+.menu-btn, .menu-hidden{
     display: none;
 }
+
+
 .content{
     width: 900px;
 }
@@ -628,7 +630,10 @@ h6{
 
 .items .item {
     width: 260px;
+    cursor: pointer;
 }
+
+
 
 .items img{
     width: 200px;
@@ -657,16 +662,27 @@ h6{
 .content-portfolio i{
     position: relative;
     font-size: 20px;
-    top: 40%;
-    left: 45%;
+    left: 35%;
+    bottom: 140px;
     color: #fff;
+    visibility: hidden;
+    
 }
 
 .content-portfolio i:before{
     border: 10px solid var(--color-yellow);
     border-radius: 50%;
     background-color: var(--color-yellow);
-    opacity: 0 ;
+}
+
+.content-portfolio .items .item:hover i{
+    visibility: visible;
+    animation: move-up 0.5s;
+}
+
+@keyframes move-up {
+    from {opacity: 0; bottom: 80px;}
+    to {opacity: 1; bottom: 140px;}
 }
 
 .item-filter:hover {
