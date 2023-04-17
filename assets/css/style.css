@@ -1,24 +1,5 @@
 
-/* reset css */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
- html{
-    font-family: Arial, Helvetica, sans-serif;
- }
- :root{
-    --color-yellow: rgb(255,197,0);
-    --color-yellow-hover: rgb(187, 148, 22);
-    --color-bg:  rgba(235, 255, 170, 0.15);
- }
-
-body{
-    background:url(https://html.tavonline.co/mat/default/images/bg.png) #fafafa;
-    
-}
 
 p{
     font-size: 14px;
@@ -32,6 +13,8 @@ ul{
 .line{
     display: inline-block;
     width: max-content;
+    line-height: 5px;
+    font-size: 20px;
     line-height: 5px;
 }
 
@@ -48,36 +31,35 @@ h5{
 }
 h6{
     line-height:30px;
+    font-size: 15px;
 }
 .wrapper{
-    width: 1140px;
-    height: 5000px;
-    margin: auto;
+    width: 1250px;
+    height: auto;
+    /* margin: 0 auto; */
     margin-top: 60px;
-    padding: 0 15px;
+    margin-bottom: 50px;
+    /* padding: 0 15px; */
     display: flex;
-    justify-content: space-between;
 }
 
 
 .profile{
     border-radius: 7px;
-    height: 636px;
-    width: 262px;
-    padding: 15px 0;
+    height: max-content;
+    width: 350px;
+    padding-top: 15px 0;
     background-color: #fff;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
     position: relative;
+    padding: 30px 0;
 }
 
 .profile__name{
     margin-left: 20px;
+    margin-top: -20px;
     width: 100%;
-    height: 38px;
-}
-
-.name{
-    font-size: 16px;
+    padding: 20px 0; 
 }
 
 .job {
@@ -86,20 +68,44 @@ h6{
 }
 .profile__info{
     line-height: 2.5;
-    /* height: 244px; */
-    font-size: 13px;
+    height: 244px;
+    font-size: 0px;
     margin: 0px 0px 0px 60px;
     list-style-type: none;
 }   
 
 
 .profile__info-glasses{
-    width: 15%;
+    width: 30px;
     position: relative;
-    bottom: 22px;
+    bottom: 14px;
     right: 42px;
     z-index: 1;
 }
+
+/* Test icon kính thẻ li */
+
+/* .profile .profile__info li:first-child::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-yellow);
+    margin-top: -80px;
+    margin-left: -50px;
+    opacity: 0.5;
+}
+
+.profile .profile__info li:first-child::after {
+    content: "";
+    display: block;
+    background-image: url('https://html.tavonline.co/mat/default/images/glasses.png');
+    background-size: 20px 20px;
+
+} */
+
+/* Test icon kính thẻ li */
 
 .profile__info .glass{
     border: 2px solid var(--color-yellow);
@@ -108,7 +114,7 @@ h6{
     width: 40px;
     background-color: var(--color-yellow);
     position: relative;
-    bottom: 60px;
+    bottom: 40px;
     right: 48px;
     opacity: 1;
 }
@@ -128,11 +134,11 @@ h6{
 
 .profile .line{
     position: absolute;
-    height: 212px;
+    height: 200px;
     width: 1px;
     background-color: #ccc;
-    left: 33px;
-    top: 330px;
+    left: 34px;
+    top: 456px;
 }
 
 
@@ -147,7 +153,7 @@ h6{
 
 .profile__avatar{
     width: 100%;
-    height: 262px;
+    height: auto;
     clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 .downloadcv{
@@ -164,7 +170,7 @@ h6{
     background: var(--color-yellow);
     cursor: pointer;
     margin-top: 10px;
-    margin-left: px;
+    margin-left: -5px;
     
 }
 
@@ -174,22 +180,30 @@ h6{
     
 
 .main{
-    width: 848px;
+    width: 900px;
     height: auto;
-    padding: 0 15px;
-    margin-left: 20px;
+    padding: 0 30px;
+    /* margin-left: 20px; */
 }
 .header{
-    width: 848px;
+    position: relative;
+    width: 900px;
     height: 76px;
     border-radius: 10px;
     display: flex;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
 }
+.nav {
+    display: flex;
+}
+
 .nav li{
+    display: inline-block;
+}
+.nav .nav-btn{
   display: inline-block;
 }
-.nav li a{
+.nav .nav-btn a{
     color: black;
     text-decoration: none;
     line-height: 76px;
@@ -197,7 +211,7 @@ h6{
     font-size: 15px;
     padding: 0 10px;
 }
-.nav li a:hover{
+.nav .nav-btn a:hover{
     color: var(--color-yellow)
 }
 
@@ -214,8 +228,9 @@ h6{
     color: black !important;
 }
 .social{
+    display: flex;
     margin-left: auto;
-    margin-top: 18px;
+    margin-top: 22px;
 }
 .social a{
     padding: 10px;
@@ -235,26 +250,39 @@ h6{
 .social a:nth-child(4):hover{
     color: red;
 }
+.social a:hover{
+    animation: increase-size 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes increase-size {
+    from {font-size: 12px}
+    to {font-size: 15px;}
+}
 
 .btn-mail{
-    font-size: bold 14px;
+    font-size: 15px;
     font-weight: bold;
     border: 0;
     border-radius: 50px;
-    padding: 1px 25px;
-    line-height: 35px;
+    padding: 12px 30px;
     background: var(--color-yellow);
     cursor: pointer;
-    margin-left: 0;
+    margin: -5px 10px;
 }
+
+
 .btn-mail:hover{
     background-color: var(--color-yellow-hover)
 }
+
+.menu-btn{
+    display: none;
+}
 .content{
-    width: 848px;
+    width: 900px;
 }
 .content-home{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .home-aboutme{
@@ -272,6 +300,7 @@ h6{
 
 .home-my-sv{
     padding: 30px;
+    margin-top: 50px;
 }
 
 
@@ -304,23 +333,28 @@ h6{
 .home-skills li{
     list-style-type: none;
     justify-content: space-between;
+    padding: 10px 0;
 }
 .skill-item{
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }
 
 .content-resume{
     margin-top: 50px;
-    width: 848px;
+    width: 900px;
 }
 
 .history-info{
-    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
     border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
 }
 
 .lv{
-    width: 300px;
+    width: 400px;
     height: 5px;
     background-color: rgb(200,200,200) !important;
     border-radius: 2.5px;
@@ -345,21 +379,20 @@ h6{
 }
 
 .history{
+    padding-top: 80px;
+    margin-top: 50px;
+    width: 900px;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+
 }
 
 .history li:before{
 } 
 
-.history-info{
-    display: flex;
-    margin-top: 40px;
-    justify-content: center;
-    position: relative;
-    padding: 0 20px;
-}
 .history-info h3{
     display: block;
     margin-left: 10px;
+    font-size: 20px;
 }
 .info-work li:not(:first-child):before{
     content: "";
@@ -369,7 +402,7 @@ h6{
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    left: 16px;
+    left: 47px;
     margin-top: 20px;
 }
 
@@ -398,13 +431,15 @@ h6{
 }
 
 .info-work{
-    padding: 0 30px;
     border-left: 1px solid #ccc;
+    margin-left: 30px;
+    padding-left: 30px;
 }
 .info-edu{
-    padding: 0 30px;
     border-left: 1px solid #ccc;
     position: relative;
+    margin-left: 30px;
+    padding-left: 30px;
 }
 
 .info-edu li:first-child{
@@ -437,39 +472,56 @@ h6{
 }
 .history li{
     display: inline-block;
+    padding-bottom: 40px;
 }
-
+.history-info h4{
+    font-size: 18px;
+}
 .history-info span{
-    display: block;
-    font-size: 12px;
-    margin-top: -7px;
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 .history p{
     display: inline-block;
     list-style-type: none;
-    opacity: 0.7;
+    opacity: 0.6;
     margin-top: 15px;
+    font-size: 16px;
 }
 
 .client {
-    padding-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: #f1f1f1;
 }
 
-.client-img-a{
+.client .client-img-a{
     display: flex;
-    justify-content: space-around;
-    margin: 50px 0 50px 30px;
+    justify-content: space-evenly;
+    margin: 50px 15px;
+    width: 100%;
 
 }
 
 .client .client-img-a img{
-        padding: 26px 16px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
-        width: 80%;     
-} 
+        width: 100%; 
+}
 
+.client-img-a .img {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+    width: 100%;
+    padding: 26px 16px;
+    margin: 30px 15px;
+}
+
+
+.testi {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
 
 .testi .line{
     margin-bottom: 50px;
@@ -477,17 +529,32 @@ h6{
 
 .testi-cmt {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-left: 15px;
+    overflow: hidden;
 }
 .testi-cmt-item{
+    width: 260px;
     border-radius: 5px;
     padding: 20px;
     margin: 15px;
-    width: 25%;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+    flex-shrink: 0;
+    animation: slide-left-right 20s linear infinite; 
 }
+
+@keyframes slide-left-right {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 .testi-info{
     display: flex;
 }
@@ -518,6 +585,8 @@ h6{
 
 .content-portfolio{
     margin-top: 50px;
+    padding: 50px 20px 0;
+    width: 900px;
 }
 
 .content-portfolio p{
@@ -536,32 +605,53 @@ h6{
 }
 
 
-
 .filter{
     display: flex;
-    padding: 20px 0;
+    padding: 15px 0;
+    flex-wrap: wrap;
 }
 
 .filter a{
     text-decoration: none;
     display: block;
     margin: 0 8px;
-    color: black;
-    opacity: 0.7;
+    color: #b1a8a8;
+    line-height: 20px;
 }
-.item-filter{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding-top: 30px;
-    border-radius: 5px;
 
-}
+
 .items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: -40px;
+    justify-content: space-between;
+}
+
+.items .item {
+    width: 260px;
+}
+
+.items img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.items .info{
+    font-size: 15px;
+    color: #797171;
+}
+
+.button-loadmore{
+    width: 150px;
+    height: 40px;
+   background-color: var(--color-yellow);
+   border-radius: 20px;
+   margin: 20px 0 0 40% ;
+   padding-top: 10px;
+   padding-left: 28px;
+}
+
+.button-loadmore:hover{
+    background-color: var(--color-yellow-hover);
 }
 
 .content-portfolio i{
@@ -585,13 +675,15 @@ h6{
 
 .content-blog{
     padding: 50px;
+    width: 900px;
 }
 
 .blog-item {
+    padding-top: 30px;
     display: flex;
-    padding-top: 50px;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 900px;
 }
 
 .blog-item a{
@@ -600,27 +692,42 @@ h6{
 }
 
 .blog-item span{
-    font-size: 14px;
-    opacity: 0.5;
-}
-.blog-item .text{
-    font-size: 14px;
-    opacity: 0.5;
+    font-size: 13px;
+    line-height: 50px;
 }
 
-.blog-item .date{
-    font-size: 12px;
+.blog-item h5{
+    font-size: 14px;
+}
+
+.blog-item p{
+    font-size: 13x;
+    color: #534d4d;
 }
 
 .item-one{
-    width: 30%;
+    width: 290px;
     display: flex;
 }
 .blog-item img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     width: 100%;
 }
 .blog-item .item-one-info{
     padding: 20px 0 50px 10px;
+}
+
+#load-btn-blog{
+    margin: auto;
+    background-color: var(--color-yellow);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+#load-btn-blog:hover{
+   background-color: var(--color-yellow-hover);
 }
 
 .contact-info{
@@ -642,18 +749,14 @@ h6{
     width: 100%;
     height: 45px;
 }
-.form button{
-    border: 0px solid var(--color-yellow);
-    border-radius: 15px;
-    width: 100px;
-    height: 36px;
-    background-color: var(--color-yellow);
-    margin-top: 30px;
-}
 
 .form button:hover{
     background-color: var(--color-yellow-hover);
     cursor: pointer;
+}
+.content-contact{
+    padding-top: 100px;
+    padding-left: 50px;
 }
 .content-contact li {
     display: block;
@@ -670,8 +773,11 @@ h6{
     padding-left: 50px;
 }
 .infomations .info{
-    display: block;
-    margin-top: 20px;
+    margin-top: 35px;
+}
+
+.infomations .info li{
+    padding-bottom: 15px;
 }
 
 .infomations a{
@@ -695,9 +801,17 @@ h6{
     color: red;
 }
 
-.contact-map{
-    padding-top: 50px;
+.content-contact button{
+    border: 0px solid var(--color-yellow);
+    border-radius: 15px;
+    width: 100px;
+    height: 36px;
+    background-color: var(--color-yellow);
+    margin-top: 30px;
+}
 
+.contact-map{
+    padding-top: 100px;
 }
 
 .contact-map iframe{
@@ -709,7 +823,7 @@ h6{
 .footer{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 900px;
     height: 70px;
     padding-top: 50px;
     background-color: black;
