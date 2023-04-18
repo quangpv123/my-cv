@@ -160,17 +160,23 @@ h6{
     margin-left: 60px;
 }
 
+.downloadcv i {
+    font-size: 25px;
+    margin-left: 20px;
+    color: white;
+}
+
 .btn{
-    font-size: bold 14px;
     font-weight: bold;
     border: 0;
     border-radius: 50px;
-    padding: 1px 25px;
-    line-height: 36px;
+    padding: 8px 10px;
     background: var(--color-yellow);
     cursor: pointer;
     margin-top: 10px;
     margin-left: -5px;
+    display: flex;
+    line-height: 25px;
     
 }
 
@@ -234,40 +240,47 @@ h6{
 }
 .social a{
     padding: 10px;
-    font-size: 12px;
+    font-size: 15px;
     color: black;
     text-decoration: none;
+    transition: transform 0.3s ease-in-out;
 }
 .social a:first-child:hover{
-    color: blue;
+    color: blue; transform: scale(1.2);
 }
 .social a:nth-child(2):hover{
-    color: blue;
+    color: blue; transform: scale(1.2);
 }
 .social a:nth-child(3):hover{
-    color: red;
+    color: red; transform: scale(1.2);
 }
 .social a:nth-child(4):hover{
-    color: red;
+    color: red; transform: scale(1.2);
 }
 .social a:hover{
     animation: increase-size 0.3s ease-in-out;
     animation-fill-mode: forwards;
 }
-@keyframes increase-size {
-    from {font-size: 12px}
-    to {font-size: 15px;}
-}
+
 
 .btn-mail{
+    line-height: 25px;
     font-size: 15px;
     font-weight: bold;
     border: 0;
     border-radius: 50px;
-    padding: 12px 30px;
+    padding: 8px 10px;
     background: var(--color-yellow);
     cursor: pointer;
     margin: -5px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-mail i {
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
 }
 
 
@@ -352,7 +365,7 @@ h6{
     margin-top: 20px;
     justify-content: center;
     position: relative;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .lv{
@@ -381,7 +394,7 @@ h6{
 }
 
 .history{
-    padding-top: 80px;
+    padding: 30px;
     margin-top: 50px;
     width: 900px;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
@@ -404,7 +417,7 @@ h6{
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    left: 47px;
+    left: 26px;
     margin-top: 20px;
 }
 
@@ -417,19 +430,20 @@ h6{
 .info-work .briefcase{
     border: 2px solid var(--color-yellow);
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     background-color: var(--color-yellow);
     position: relative;
     bottom: -40px;
-    right: 56px;
+    right: 60px;
     opacity: 1;
 }
 
 .history-info .icon{
     position: relative;
-    left: -94px;
-    bottom: -20px;
+    left: -104px;
+    bottom: -19px;
+    font-size: 20px;
 }
 
 .info-work{
@@ -452,12 +466,12 @@ h6{
 .info-edu .briefcase{
     border: 2px solid var(--color-yellow);
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     background-color: var(--color-yellow);
     position: relative;
     bottom: -40px;
-    right: 56px;
+    right: 60px;
     opacity: 1;
 }
 
@@ -501,7 +515,7 @@ h6{
 .client .client-img-a{
     display: flex;
     justify-content: space-evenly;
-    margin: 50px 15px;
+    margin: 50px 0px;
     width: 100%;
 
 }
@@ -516,7 +530,7 @@ h6{
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
     width: 100%;
     padding: 26px 16px;
-    margin: 30px 15px;
+    margin: 30px 15px 30px 0;
 }
 
 
@@ -587,7 +601,7 @@ h6{
 
 .content-portfolio{
     margin-top: 50px;
-    padding: 50px 20px 0;
+    padding: 30px;
     width: 900px;
 }
 
@@ -616,7 +630,7 @@ h6{
 .filter a{
     text-decoration: none;
     display: block;
-    margin: 0 8px;
+    padding-right: 15px;
     color: #b1a8a8;
     line-height: 20px;
 }
@@ -690,7 +704,8 @@ h6{
 }
 
 .content-blog{
-    padding: 50px;
+    margin-top: 50px;
+    padding: 30px;
     width: 900px;
 }
 
@@ -732,6 +747,7 @@ h6{
 }
 .blog-item .item-one-info{
     padding: 20px 0 50px 10px;
+    height: max-content;
 }
 
 #load-btn-blog{
@@ -756,6 +772,10 @@ h6{
     justify-content: space-around;
 }
 
+.form-input input, textarea {
+    outline: none;
+}
+
 .form-input-item{
     padding-right: 30px;
 }
@@ -771,8 +791,8 @@ h6{
     cursor: pointer;
 }
 .content-contact{
-    padding-top: 100px;
-    padding-left: 50px;
+    margin-top: 50px;
+    padding: 30px;
 }
 .content-contact li {
     display: block;
@@ -798,23 +818,25 @@ h6{
 
 .infomations a{
     display: inline-block;
-    font-size: 12px;
+    font-size: 15px;
     color: black;
     text-decoration: none;
     margin-top: 15px;
     margin-right: 10px;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
 }
 .infomations a:first-child:hover{
-    color: blue;
+    color: blue; transform: scale(1.2);
 }
 .infomations a:nth-child(2):hover{
-    color: blue;
+    color: blue; transform: scale(1.2);
 }
 .infomations a:nth-child(3):hover{
-    color: red;
+    color: red; transform: scale(1.2);
 }
 .infomations a:nth-child(4):hover{
-    color: red;
+    color: red; transform: scale(1.2);
 }
 
 .content-contact button{
@@ -832,7 +854,7 @@ h6{
 
 .contact-map iframe{
     width: 100%;
-    padding: 20px 20px 0 20px;
+    padding-top: 20px;
     height: 350px;
 }
 
